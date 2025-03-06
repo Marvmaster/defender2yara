@@ -106741,3 +106741,31 @@ rule Trojan_MSIL_AgentTesla_SLP_2147934668_0
         (all of ($x*))
 }
 
+rule Trojan_MSIL_AgentTesla_AYA_2147935294_0
+{
+    meta:
+        author = "defender2yara"
+        detection_name = "Trojan:MSIL/AgentTesla.AYA!MTB"
+        threat_id = "2147935294"
+        type = "Trojan"
+        platform = "MSIL: .NET intermediate language scripts"
+        family = "AgentTesla"
+        severity = "Critical"
+        info = "MTB: Microsoft Threat Behavior"
+        signature_type = "SIGNATURE_TYPE_PEHSTR_EXT"
+        threshold = "10"
+        strings_accuracy = "High"
+    strings:
+        $x_2_1 = "$4a2f8fb6-1077-469a-9246-736e6afe8da1" ascii //weight: 2
+        $x_2_2 = "AddRootkit" ascii //weight: 2
+        $x_1_3 = "isVM_by_wim_temper" ascii //weight: 1
+        $x_1_4 = "Client.Helper" ascii //weight: 1
+        $x_1_5 = "EnvironmentDetected" ascii //weight: 1
+        $x_1_6 = "RunAntiAnalysis" ascii //weight: 1
+        $x_1_7 = "RemoveFileSecurity" ascii //weight: 1
+        $x_1_8 = "DecodEncod" ascii //weight: 1
+    condition:
+        (filesize < 20MB) and
+        (all of ($x*))
+}
+
