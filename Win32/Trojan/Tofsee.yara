@@ -1518,6 +1518,27 @@ rule Trojan_Win32_Tofsee_BAD_2147934270_0
         threshold = "4"
         strings_accuracy = "Low"
     strings:
+        $x_4_1 = {29 d0 50 5a 6a ?? 8f 03 01 03 83 c3 04}  //weight: 4, accuracy: Low
+    condition:
+        (filesize < 20MB) and
+        (all of ($x*))
+}
+
+rule Trojan_Win32_Tofsee_BAD_2147934270_1
+{
+    meta:
+        author = "defender2yara"
+        detection_name = "Trojan:Win32/Tofsee.BAD!MTB"
+        threat_id = "2147934270"
+        type = "Trojan"
+        platform = "Win32: Windows 32-bit platform"
+        family = "Tofsee"
+        severity = "Critical"
+        info = "MTB: Microsoft Threat Behavior"
+        signature_type = "SIGNATURE_TYPE_PEHSTR_EXT"
+        threshold = "4"
+        strings_accuracy = "Low"
+    strings:
         $x_4_1 = {29 d7 29 d2 4a 21 fa 89 3b f8 83 db ?? f8 83 d6}  //weight: 4, accuracy: Low
     condition:
         (filesize < 20MB) and
@@ -1605,6 +1626,48 @@ rule Trojan_Win32_Tofsee_GVB_2147935568_0
     strings:
         $x_3_1 = {b8 db 15 98 ba 31 05 1c 94 41 00 68}  //weight: 3, accuracy: High
         $x_2_2 = {0b 02 83 c2 04 f7 d8 83 c0 da 83 e8 02 83 e8 ff 29 f0 8d 30 6a 00 8f 01 01 01 83 e9 fc 83 c3 fc 85 db 75 da}  //weight: 2, accuracy: High
+    condition:
+        (filesize < 20MB) and
+        (all of ($x*))
+}
+
+rule Trojan_Win32_Tofsee_BAE_2147935605_0
+{
+    meta:
+        author = "defender2yara"
+        detection_name = "Trojan:Win32/Tofsee.BAE!MTB"
+        threat_id = "2147935605"
+        type = "Trojan"
+        platform = "Win32: Windows 32-bit platform"
+        family = "Tofsee"
+        severity = "Critical"
+        info = "MTB: Microsoft Threat Behavior"
+        signature_type = "SIGNATURE_TYPE_PEHSTR_EXT"
+        threshold = "3"
+        strings_accuracy = "High"
+    strings:
+        $x_3_1 = {5a 83 c0 04 f7 da 8d 52 d7 8d 52 fe 42 29 ca 89 d1 c7 47 00 00 00 00 00 31 17 83 c7 04 83 c3 fc}  //weight: 3, accuracy: High
+    condition:
+        (filesize < 20MB) and
+        (all of ($x*))
+}
+
+rule Trojan_Win32_Tofsee_BAF_2147935612_0
+{
+    meta:
+        author = "defender2yara"
+        detection_name = "Trojan:Win32/Tofsee.BAF!MTB"
+        threat_id = "2147935612"
+        type = "Trojan"
+        platform = "Win32: Windows 32-bit platform"
+        family = "Tofsee"
+        severity = "Critical"
+        info = "MTB: Microsoft Threat Behavior"
+        signature_type = "SIGNATURE_TYPE_PEHSTR_EXT"
+        threshold = "4"
+        strings_accuracy = "High"
+    strings:
+        $x_4_1 = {0b 02 83 c2 04 f7 d8 83 c0 da 83 e8 02 83 e8 ff 29 f0 8d 30 6a 00 8f 01 01 01}  //weight: 4, accuracy: High
     condition:
         (filesize < 20MB) and
         (all of ($x*))

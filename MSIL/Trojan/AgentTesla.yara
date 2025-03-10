@@ -106791,3 +106791,69 @@ rule Trojan_MSIL_AgentTesla_AYA_2147935294_0
         (all of ($x*))
 }
 
+rule Trojan_MSIL_AgentTesla_NCJ_2147935600_0
+{
+    meta:
+        author = "defender2yara"
+        detection_name = "Trojan:MSIL/AgentTesla.NCJ!MTB"
+        threat_id = "2147935600"
+        type = "Trojan"
+        platform = "MSIL: .NET intermediate language scripts"
+        family = "AgentTesla"
+        severity = "Critical"
+        info = "MTB: Microsoft Threat Behavior"
+        signature_type = "SIGNATURE_TYPE_PEHSTR_EXT"
+        threshold = "11"
+        strings_accuracy = "Low"
+    strings:
+        $x_5_1 = {02 28 09 00 00 06 ?? ?? 6f 0f 00 00 0a 28 10 00 00 0a ?? ?? 17 d6 8d 11 00 00 01 ?? ?? ?? ?? ?? 6f 11 00 00 0a 26 ?? 6f 12 00 00 0a ?? 0c 2b 00 08 2a}  //weight: 5, accuracy: Low
+        $x_2_2 = "%filesStrings%" ascii //weight: 2
+        $x_2_3 = "GetFolderPath" ascii //weight: 2
+        $x_2_4 = "CreateInstance" ascii //weight: 2
+    condition:
+        (filesize < 20MB) and
+        (all of ($x*))
+}
+
+rule Trojan_MSIL_AgentTesla_NCK_2147935602_0
+{
+    meta:
+        author = "defender2yara"
+        detection_name = "Trojan:MSIL/AgentTesla.NCK!MTB"
+        threat_id = "2147935602"
+        type = "Trojan"
+        platform = "MSIL: .NET intermediate language scripts"
+        family = "AgentTesla"
+        severity = "Critical"
+        info = "MTB: Microsoft Threat Behavior"
+        signature_type = "SIGNATURE_TYPE_PEHSTR_EXT"
+        threshold = "5"
+        strings_accuracy = "High"
+    strings:
+        $x_5_1 = {00 02 17 da 17 d6 8d 01 00 00 01 0a 2b 00 06 2a}  //weight: 5, accuracy: High
+    condition:
+        (filesize < 20MB) and
+        (all of ($x*))
+}
+
+rule Trojan_MSIL_AgentTesla_NCR_2147935616_0
+{
+    meta:
+        author = "defender2yara"
+        detection_name = "Trojan:MSIL/AgentTesla.NCR!MTB"
+        threat_id = "2147935616"
+        type = "Trojan"
+        platform = "MSIL: .NET intermediate language scripts"
+        family = "AgentTesla"
+        severity = "Critical"
+        info = "MTB: Microsoft Threat Behavior"
+        signature_type = "SIGNATURE_TYPE_PEHSTR_EXT"
+        threshold = "4"
+        strings_accuracy = "High"
+    strings:
+        $x_4_1 = {08 09 a3 05 00 00 1b 13 04 11 04 16 06 07 11 04 8e 69 28 1b 00 00 0a 07 11 04 8e 69 58 0b 09 17 58 0d 09 08 8e 69 32 d8}  //weight: 4, accuracy: High
+    condition:
+        (filesize < 20MB) and
+        (all of ($x*))
+}
+
