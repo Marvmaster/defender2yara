@@ -3050,3 +3050,24 @@ rule Trojan_Win32_LummaC_CCIR_2147936010_0
         (all of ($x*))
 }
 
+rule Trojan_Win32_LummaC_SOSX_2147936306_0
+{
+    meta:
+        author = "defender2yara"
+        detection_name = "Trojan:Win32/LummaC.SOSX!MTB"
+        threat_id = "2147936306"
+        type = "Trojan"
+        platform = "Win32: Windows 32-bit platform"
+        family = "LummaC"
+        severity = "Critical"
+        info = "MTB: Microsoft Threat Behavior"
+        signature_type = "SIGNATURE_TYPE_PEHSTR_EXT"
+        threshold = "1"
+        strings_accuracy = "Low"
+    strings:
+        $x_1_1 = {8b 44 24 0c b9 ?? ?? ?? ?? 89 44 24 28 8b 44 24 28 3d ?? ?? ?? ?? b8 ?? ?? ?? ?? 0f 4c c1 3d}  //weight: 1, accuracy: Low
+    condition:
+        (filesize < 20MB) and
+        (all of ($x*))
+}
+
