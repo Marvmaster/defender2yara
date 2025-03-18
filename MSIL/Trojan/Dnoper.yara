@@ -568,3 +568,26 @@ rule Trojan_MSIL_Dnoper_SYVO_2147936303_0
         (all of ($x*))
 }
 
+rule Trojan_MSIL_Dnoper_PGD_2147936337_0
+{
+    meta:
+        author = "defender2yara"
+        detection_name = "Trojan:MSIL/Dnoper.PGD!MTB"
+        threat_id = "2147936337"
+        type = "Trojan"
+        platform = "MSIL: .NET intermediate language scripts"
+        family = "Dnoper"
+        severity = "Critical"
+        info = "MTB: Microsoft Threat Behavior"
+        signature_type = "SIGNATURE_TYPE_PEHSTR_EXT"
+        threshold = "5"
+        strings_accuracy = "High"
+    strings:
+        $x_1_1 = "103.179.184.156/STC/config.json" ascii //weight: 1
+        $x_2_2 = "Microsoft\\Windows\\Start Menu\\Programs\\Startup" ascii //weight: 2
+        $x_2_3 = "PDF downloaded and saved to:" ascii //weight: 2
+    condition:
+        (filesize < 20MB) and
+        (all of ($x*))
+}
+
