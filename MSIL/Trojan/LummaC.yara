@@ -2129,3 +2129,26 @@ rule Trojan_MSIL_LummaC_EAHG_2147936228_0
         (all of ($x*))
 }
 
+rule Trojan_MSIL_LummaC_AKOA_2147936358_0
+{
+    meta:
+        author = "defender2yara"
+        detection_name = "Trojan:MSIL/LummaC.AKOA!MTB"
+        threat_id = "2147936358"
+        type = "Trojan"
+        platform = "MSIL: .NET intermediate language scripts"
+        family = "LummaC"
+        severity = "Critical"
+        info = "MTB: Microsoft Threat Behavior"
+        signature_type = "SIGNATURE_TYPE_PEHSTR_EXT"
+        threshold = "5"
+        strings_accuracy = "Low"
+    strings:
+        $x_3_1 = {17 2c 06 14 38 bb 00 00 00 72 ?? ?? 00 70 38 b7 00 00 00 38 bc 00 00 00 72 ?? ?? 00 70 38 b8 00 00 00 38 bd 00 00 00 38 be 00 00 00 1d 3a c2 00 00 00 26 2b 70 38 71 00 00 00 08 6f ?? ?? 00 0a 13 04 73 ?? ?? 00 0a 13 05 11 05 11 04 17 73 ?? ?? 00 0a 13 06 16 2d 11 2b 0f 19 2c 1e 00 28 ?? 00 00 06 0a de 03 26 de 00 19 2c 0f 06 2c eb 11 06 06 16 06 8e 69 6f ?? ?? 00 0a 11 05 6f ?? ?? 00 0a 0a de 1b}  //weight: 3, accuracy: Low
+        $x_1_2 = "FromBase64String" ascii //weight: 1
+        $x_1_3 = "CreateDecryptor" ascii //weight: 1
+    condition:
+        (filesize < 20MB) and
+        (all of ($x*))
+}
+
