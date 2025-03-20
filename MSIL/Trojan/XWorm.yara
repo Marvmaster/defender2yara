@@ -1321,6 +1321,28 @@ rule Trojan_MSIL_XWorm_ARM_2147934594_0
         (all of ($x*))
 }
 
+rule Trojan_MSIL_XWorm_ARM_2147934594_1
+{
+    meta:
+        author = "defender2yara"
+        detection_name = "Trojan:MSIL/XWorm.ARM!MTB"
+        threat_id = "2147934594"
+        type = "Trojan"
+        platform = "MSIL: .NET intermediate language scripts"
+        family = "XWorm"
+        severity = "Critical"
+        info = "MTB: Microsoft Threat Behavior"
+        signature_type = "SIGNATURE_TYPE_PEHSTR_EXT"
+        threshold = "3"
+        strings_accuracy = "Low"
+    strings:
+        $x_2_1 = {09 1a 5a 11 08 1b 5a 58 1f 0a 5d 17 58 13 09 11 08 1f 0a 5d 17 58 13 0a 09 1f 0a 5d 17 58 13 0b 02 09 11 08 6f ?? 00 00 0a 13 0c 04 03 6f ?? 00 00 0a 59 13 0d 11 0c 11 0d 03}  //weight: 2, accuracy: Low
+        $x_1_2 = "ChinhDo.Transactions" wide //weight: 1
+    condition:
+        (filesize < 20MB) and
+        (all of ($x*))
+}
+
 rule Trojan_MSIL_XWorm_PHU_2147934712_0
 {
     meta:
