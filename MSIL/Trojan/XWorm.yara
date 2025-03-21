@@ -1692,3 +1692,26 @@ rule Trojan_MSIL_XWorm_SIG_2147936585_0
         (all of ($x*))
 }
 
+rule Trojan_MSIL_XWorm_AWR_2147936631_0
+{
+    meta:
+        author = "defender2yara"
+        detection_name = "Trojan:MSIL/XWorm.AWR!MTB"
+        threat_id = "2147936631"
+        type = "Trojan"
+        platform = "MSIL: .NET intermediate language scripts"
+        family = "XWorm"
+        severity = "Critical"
+        info = "MTB: Microsoft Threat Behavior"
+        signature_type = "SIGNATURE_TYPE_PEHSTR_EXT"
+        threshold = "6"
+        strings_accuracy = "Low"
+    strings:
+        $x_2_1 = {16 13 04 2b 41 11 05 11 04 9a 0d 07 09 6f ?? 00 00 0a 72 ?? 0b 00 70 28 ?? 00 00 0a 09 6f ?? 00 00 0a 13 06 12 06 28 ?? 00 00 0a 28 ?? 00 00 0a 72 ?? 0b 00 70 28 ?? 00 00 0a 28 ?? 00 00 0a 0b 11 04 17 d6}  //weight: 2, accuracy: Low
+        $x_3_2 = {13 05 2b 2b 11 05 6f ?? 01 00 0a 0d 08 09 72 ?? 0f 00 70 6f ?? 01 00 0a 6f ?? 00 00 0a 6f ?? 00 00 0a 26 08 72 ?? 0f 00 70 6f ?? 00 00 0a 26 11 05 6f}  //weight: 3, accuracy: Low
+        $x_1_3 = "NeptuneRAT V2" wide //weight: 1
+    condition:
+        (filesize < 20MB) and
+        (all of ($x*))
+}
+
