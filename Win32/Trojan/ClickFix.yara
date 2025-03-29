@@ -1610,7 +1610,7 @@ rule Trojan_Win32_ClickFix_GVA_2147937010_0
         strings_accuracy = "Low"
     strings:
         $x_5_1 = "powershell" wide //weight: 5
-        $x_5_2 = {69 00 72 00 6d 00 20 00 [0-6] 2e 00 [0-6] 2e 00 [0-6] 2e 00 [0-6] 3a 00 [0-10] 2f 00 24 00}  //weight: 5, accuracy: Low
+        $x_5_2 = {69 00 72 00 6d 00 20 00 [0-255] 3a 00 [0-10] 2f 00 24 00}  //weight: 5, accuracy: Low
         $x_3_3 = "|iex" wide //weight: 3
     condition:
         (filesize < 20MB) and
