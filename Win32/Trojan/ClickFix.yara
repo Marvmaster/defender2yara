@@ -1804,39 +1804,6 @@ rule Trojan_Win32_ClickFix_DAJ_2147937505_0
         )
 }
 
-rule Trojan_Win32_ClickFix_DAK_2147937506_0
-{
-    meta:
-        author = "defender2yara"
-        detection_name = "Trojan:Win32/ClickFix.DAK!MTB"
-        threat_id = "2147937506"
-        type = "Trojan"
-        platform = "Win32: Windows 32-bit platform"
-        family = "ClickFix"
-        severity = "Critical"
-        info = "MTB: Microsoft Threat Behavior"
-        signature_type = "SIGNATURE_TYPE_CMDHSTR_EXT"
-        threshold = "116"
-        strings_accuracy = "Low"
-    strings:
-        $x_100_1 = "powershell" wide //weight: 100
-        $x_10_2 = {73 00 74 00 61 00 72 00 74 00 2d 00 70 00 72 00 6f 00 63 00 65 00 73 00 73 00 [0-15] 2d 00 77 00 69 00 6e 00 64 00 6f 00 77 00 73 00 74 00 79 00 6c 00 65 00}  //weight: 10, accuracy: Low
-        $x_5_3 = "-outfile" wide //weight: 5
-        $x_1_4 = "iex" wide //weight: 1
-        $x_1_5 = "invoke-expression" wide //weight: 1
-        $x_1_6 = "invoke-webrequest" wide //weight: 1
-        $x_1_7 = "iwr" wide //weight: 1
-        $x_1_8 = "irm" wide //weight: 1
-        $x_1_9 = "invoke-restmethod" wide //weight: 1
-    condition:
-        (filesize < 20MB) and
-        (
-            ((1 of ($x_100_*) and 1 of ($x_10_*) and 6 of ($x_1_*))) or
-            ((1 of ($x_100_*) and 1 of ($x_10_*) and 1 of ($x_5_*) and 1 of ($x_1_*))) or
-            (all of ($x*))
-        )
-}
-
 rule Trojan_Win32_ClickFix_SE_2147937535_0
 {
     meta:
@@ -1895,6 +1862,8 @@ rule Trojan_Win32_ClickFix_SE_2147937535_0
         $x_1_42 = ".cda" wide //weight: 1
         $x_1_43 = ".m4a" wide //weight: 1
         $x_1_44 = ".xll" wide //weight: 1
+        $x_1_45 = ".digital" wide //weight: 1
+        $x_1_46 = ".culture" wide //weight: 1
     condition:
         (filesize < 20MB) and
         (
@@ -1974,5 +1943,35 @@ rule Trojan_Win32_ClickFix_HA_2147937679_0
     condition:
         (filesize < 20MB) and
         (all of ($x*))
+}
+
+rule Trojan_Win32_ClickFix_SDA_2147937775_0
+{
+    meta:
+        author = "defender2yara"
+        detection_name = "Trojan:Win32/ClickFix.SDA"
+        threat_id = "2147937775"
+        type = "Trojan"
+        platform = "Win32: Windows 32-bit platform"
+        family = "ClickFix"
+        severity = "Critical"
+        signature_type = "SIGNATURE_TYPE_CMDHSTR_EXT"
+        threshold = "130"
+        strings_accuracy = "High"
+    strings:
+        $x_100_1 = "powershell" wide //weight: 100
+        $x_10_2 = "http" wide //weight: 10
+        $x_10_3 = " iex" wide //weight: 10
+        $x_10_4 = "iwr" wide //weight: 10
+        $x_10_5 = "irm" wide //weight: 10
+        $x_10_6 = "invoke-expression" wide //weight: 10
+        $n_500_7 = "msiexec.exe" wide //weight: -500
+    condition:
+        (filesize < 20MB) and
+        (not (any of ($n*))) and
+        (
+            ((1 of ($x_100_*) and 3 of ($x_10_*))) or
+            (all of ($x*))
+        )
 }
 
