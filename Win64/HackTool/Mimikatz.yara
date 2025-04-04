@@ -291,12 +291,12 @@ rule HackTool_Win64_Mimikatz_IB_2147850503_0
         (all of ($x*))
 }
 
-rule HackTool_Win64_Mimikatz_G_2147937865_0
+rule HackTool_Win64_Mimikatz_G_2147937867_0
 {
     meta:
         author = "defender2yara"
         detection_name = "HackTool:Win64/Mimikatz.G"
-        threat_id = "2147937865"
+        threat_id = "2147937867"
         type = "HackTool"
         platform = "Win64: Windows 64-bit platform"
         family = "Mimikatz"
@@ -315,12 +315,12 @@ rule HackTool_Win64_Mimikatz_G_2147937865_0
         (4 of ($x*))
 }
 
-rule HackTool_Win64_Mimikatz_H_2147937866_0
+rule HackTool_Win64_Mimikatz_H_2147937868_0
 {
     meta:
         author = "defender2yara"
         detection_name = "HackTool:Win64/Mimikatz.H"
-        threat_id = "2147937866"
+        threat_id = "2147937868"
         type = "HackTool"
         platform = "Win64: Windows 64-bit platform"
         family = "Mimikatz"

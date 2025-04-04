@@ -1,9 +1,9 @@
-rule Trojan_MSIL_Radthief_MKV_2147937868_0
+rule Trojan_MSIL_Radthief_MKV_2147937870_0
 {
     meta:
         author = "defender2yara"
         detection_name = "Trojan:MSIL/Radthief.MKV!MTB"
-        threat_id = "2147937868"
+        threat_id = "2147937870"
         type = "Trojan"
         platform = "MSIL: .NET intermediate language scripts"
         family = "Radthief"
