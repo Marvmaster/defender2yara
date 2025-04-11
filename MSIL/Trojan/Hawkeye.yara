@@ -80,13 +80,34 @@ rule Trojan_MSIL_Hawkeye_AHE_2147840878_0
         threshold = "1"
         strings_accuracy = "High"
     strings:
-        $x_1_1 = {0c 0a 2b 37 02 50 06 02 50 8e b7 5d 02 50 06 02 50 8e b7 5d 91 03 06 03 8e b7 5d 91 61 02 50 06 17 d6 02 50 8e b7 5d 91 da 20 00 01 00 00 d6 20 00 01 00 00 5d b4 9c 06 17 d6 0a 06 08}  //weight: 1, accuracy: High
+        $x_1_1 = {17 58 20 00 01 00 00 5d 13 07 08 11 05 11 07 91 58 20 00 01 00 00 5d 0c 11 05 11 07 91 13 0b 11 05 11 07 11 05 08 91 9c 11 05 08 11 0b 9c 11 05 11 07 91 11 05 08 91 58}  //weight: 1, accuracy: High
     condition:
         (filesize < 20MB) and
         (all of ($x*))
 }
 
 rule Trojan_MSIL_Hawkeye_AHE_2147840878_1
+{
+    meta:
+        author = "defender2yara"
+        detection_name = "Trojan:MSIL/Hawkeye.AHE!MTB"
+        threat_id = "2147840878"
+        type = "Trojan"
+        platform = "MSIL: .NET intermediate language scripts"
+        family = "Hawkeye"
+        severity = "Critical"
+        info = "MTB: Microsoft Threat Behavior"
+        signature_type = "SIGNATURE_TYPE_PEHSTR_EXT"
+        threshold = "1"
+        strings_accuracy = "High"
+    strings:
+        $x_1_1 = {0c 0a 2b 37 02 50 06 02 50 8e b7 5d 02 50 06 02 50 8e b7 5d 91 03 06 03 8e b7 5d 91 61 02 50 06 17 d6 02 50 8e b7 5d 91 da 20 00 01 00 00 d6 20 00 01 00 00 5d b4 9c 06 17 d6 0a 06 08}  //weight: 1, accuracy: High
+    condition:
+        (filesize < 20MB) and
+        (all of ($x*))
+}
+
+rule Trojan_MSIL_Hawkeye_AHE_2147840878_2
 {
     meta:
         author = "defender2yara"
