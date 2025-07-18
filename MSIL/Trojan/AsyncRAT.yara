@@ -6226,3 +6226,24 @@ rule Trojan_MSIL_AsyncRAT_GVA_2147946807_0
         (all of ($x*))
 }
 
+rule Trojan_MSIL_AsyncRAT_GVB_2147946838_0
+{
+    meta:
+        author = "defender2yara"
+        detection_name = "Trojan:MSIL/AsyncRAT.GVB!MTB"
+        threat_id = "2147946838"
+        type = "Trojan"
+        platform = "MSIL: .NET intermediate language scripts"
+        family = "AsyncRAT"
+        severity = "Critical"
+        info = "MTB: Microsoft Threat Behavior"
+        signature_type = "SIGNATURE_TYPE_PEHSTR_EXT"
+        threshold = "1"
+        strings_accuracy = "High"
+    strings:
+        $x_1_1 = {02 8e 69 8d 54 00 00 01 0a 02 8e 69 17 59 0b 16 0c 38 0e 00 00 00 06 08 02 07 91 9c 07 17 59 0b 08 17 58 0c 08 06 8e 69 32 ec}  //weight: 1, accuracy: High
+    condition:
+        (filesize < 20MB) and
+        (all of ($x*))
+}
+
